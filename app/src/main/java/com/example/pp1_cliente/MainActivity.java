@@ -39,7 +39,7 @@ public class MainActivity<Sting> extends AppCompatActivity {
         btnA = findViewById(R.id.btnA);
         btnCrear = findViewById(R.id.btnCrear);
         btnConfir = findViewById(R.id.btnConfir);
-
+        initCliente();
         //--------------------
         btnR.setOnClickListener(
             (v)->{
@@ -47,7 +47,7 @@ public class MainActivity<Sting> extends AppCompatActivity {
            String y = coordY.getText().toString();
            EnviarMensaje(x+":"+y);
 
-           initCliente();
+
 
     }
     );
@@ -57,7 +57,7 @@ public class MainActivity<Sting> extends AppCompatActivity {
                 ()->{
                     try{
                         //para solicitar la conexión
-                        Socket socket = new Socket("192.168.20.1", 5000);
+                        Socket socket = new Socket("192.168.20.22", 5000);
 
                         //cliente y server conectados
                         System.out.println("Conexión exitosa");
